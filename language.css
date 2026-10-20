@@ -1,0 +1,24 @@
+/* Compact language control; longer English and Kazakh copy keeps the original layout. */
+@font-face{font-family:"Ransel Noto";src:url("assets/noto-sans.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap}
+html[lang=kk] body{font-family:"Ransel Noto",Arial,sans-serif}
+html[lang=kk] .brand>span{font-family:Manrope,Arial,sans-serif}
+.language-picker{position:relative;display:block;flex-shrink:0;margin:0}
+.language-picker select{appearance:none;-webkit-appearance:none;display:block;width:65px;min-height:36px;margin:0;padding:8px 23px 8px 11px;border:1px solid var(--line);border-radius:30px;background:var(--alt);color:var(--text);font-size:10px;font-weight:700;line-height:1.4;cursor:pointer}
+.language-picker>span{position:absolute;right:10px;top:7px;color:var(--muted);font-size:13px;pointer-events:none}
+.header-actions{gap:17px}
+.header-phone{display:block}
+html[lang=kk] h1{font-size:clamp(62px,6.5vw,104px);letter-spacing:-4px}
+html[lang=kk] .hero-bottom .geography{max-width:240px}
+html[lang=kk] .equipment-info h3{overflow-wrap:anywhere}
+html[lang=kk] .hero .eyebrow{max-width:550px}
+html[lang=kk] .catalog-note p{min-width:0}
+html[lang=en] .hero-description{max-width:410px}
+@media(max-width:600px){html[lang=ru] h1{font-size:clamp(40px,12.55vw,70px)}}
+@media(max-width:1200px){.desktop-nav{gap:16px}.header-actions{gap:14px}html[lang=kk] h1{font-size:7.1vw}}
+@media(max-width:900px){.header-phone{display:none}html[lang=kk] h1{font-size:66px}html[lang=kk] .about-copy h2{font-size:32px}}
+@media(max-width:600px){.header{gap:10px}.header .brand>span{font-size:18px;letter-spacing:-1px}.header .brand small{font-size:5px;letter-spacing:1.7px}.header-actions{gap:8px}.language-picker select{width:59px;min-height:34px;padding:8px 19px 8px 9px;font-size:10px}.language-picker>span{right:8px;top:6px}.theme-toggle{width:46px;height:28px;flex-shrink:0}.theme-toggle i{width:20px;height:20px}.theme-toggle .sun,.theme-toggle .moon{width:20px;font-size:14px}[data-theme=dark] .theme-toggle i{transform:translateX(18px)}.menu-toggle{width:24px;flex-shrink:0}.menu-toggle span{width:21px}html[lang=kk] h1{font-size:clamp(33px,10.2vw,59px);letter-spacing:-1.8px}html[lang=kk] h2{font-size:34px;letter-spacing:-1.6px}html[lang=kk] .about-copy h2{font-size:34px}html[lang=kk] .contact-section h2{font-size:36px;letter-spacing:-1.8px}html[lang=kk] .hero .eyebrow{max-width:310px;letter-spacing:1.1px}html[lang=kk] .hero-bottom>span{font-size:8px}html[lang=kk] .catalog-note{display:grid;grid-template-columns:25px 1fr;gap:13px}html[lang=kk] .catalog-note .text-link{grid-column:2;margin-left:0;justify-self:start;white-space:normal}html[lang=kk] .equipment-price{font-size:11px}html[lang=kk] .equipment-price small{font-size:9px}.equipment-category{max-width:72%;line-height:1.4}.hero-buttons .button{gap:13px}}
+@media(max-width:360px){.header{padding-inline:16px;gap:8px}.header .brand{padding-left:8px}.header .brand>span{font-size:15px;letter-spacing:-.8px}.header .brand small{font-size:4.5px;letter-spacing:1.2px}.header-actions{gap:7px}.hero-buttons .button{gap:9px}html[lang=kk] .hero-bottom{align-items:flex-start;flex-direction:column;gap:4px}html[lang=kk] .hero-bottom>span:nth-child(3){margin-left:0}html[lang=kk] .hero-content{min-height:670px}html[lang=kk] .rental-facts>div{grid-template-columns:75px 1fr}html[lang=kk] .detail-footer .button{font-size:11px}}
+/* Keep the full phone number visible alongside the language and theme controls. */
+.header-phone{display:block;flex-shrink:0}
+@media(max-width:1200px){.desktop-nav{display:none}.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:6px;background:none;width:30px;height:40px;padding:3px}.menu-toggle span{display:block;height:1px;width:24px;background:var(--text)}.mobile-nav{top:86px}}
+@media(max-width:700px){html{scroll-padding-top:125px}.header{height:112px;padding-bottom:36px}.header-phone{position:absolute;bottom:7px;left:20px;right:20px;text-align:center;border-top:1px solid var(--line);padding-top:7px;font-size:12px;line-height:20px}.mobile-nav{top:112px}}
