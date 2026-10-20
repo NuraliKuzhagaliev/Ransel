@@ -17,7 +17,9 @@ const t=source=>i18n.t(source);
 let returnFocus=null;
 let currentFilter='all';
 let activeDetailId=null;
-const equipmentImage=item=>`<div class="equipment-image" style="--crop-top:${-item.crop/item.cropHeight*100}%;aspect-ratio:210/${item.cropHeight}"><img src="assets/commercial-proposal.jpeg" alt="${t(item.name)} — ${t('изображение из коммерческого предложения')}" loading="lazy"></div>`;
+// Each card crops the same cached source image. Load it eagerly: the large negative
+// crop offset can prevent WebKit's lazy loader from ever observing the image.
+const equipmentImage=item=>`<div class="equipment-image" style="--crop-top:${-item.crop/item.cropHeight*100}%;aspect-ratio:210/${item.cropHeight}"><img src="assets/commercial-proposal.jpeg" width="1024" height="1536" alt="${t(item.name)} — ${t('изображение из коммерческого предложения')}" loading="eager" decoding="async"></div>`;
 
 function applyFilter(animate=true){
   document.querySelectorAll('[data-filter]').forEach(button=>{const active=button.dataset.filter===currentFilter;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));});
